@@ -1,0 +1,161 @@
+/*general*/
+:root {
+	--primary-color: rgb(62, 93, 232);
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.disappear {
+	display: none;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	align-items: center;
+	justify-content: center;
+}
+
+input::-webkit-inner-spin-button {
+	display: none;
+}
+
+input {
+	width: 70px;
+	height: 30px;
+	font-size: 20px;
+}
+
+input:hover {
+	cursor: pointer;
+}
+
+/*container*/
+#container {
+	border: 1px solid black;
+	display: flex;
+	flex-direction: column;
+	width: 500px;
+}
+
+/*title*/
+#container #title h1 {
+	text-decoration: none;
+	font-weight: normal;
+	text-align: center;
+	font-size: 25px;
+	padding: 8px;
+	color: white;
+	background-color: var(--primary-color);
+}
+
+/*modes*/
+#container #modes {
+	border: 1px solid black;
+	border-top: none;
+	border-left: none;
+	display: flex;
+	width: 120px;
+}
+
+#container #modes button {
+	width: 50%;
+	border: none;
+	padding: 5px;
+	width: 60px;
+	height: 40px;
+	font-size: 10px;
+	background-color: white;
+}
+
+#container #modes button:hover {
+	background-color: var(--primary-color);
+	color: white;
+	cursor: pointer;
+}
+
+#container #modes button.chosen {
+	background-color: var(--primary-color) !important;
+	color: white;
+}
+
+/*height and weight*/
+#container #height {
+	margin-top: 15px;
+}
+
+#container #height,
+#container #weight {
+	display: flex;
+	align-items: flex-end;
+	height: 60px;
+	font-size: 20px;
+}
+
+#container #height > *,
+#container #weight > * {
+	margin: 5px;
+}
+
+/*calculation and result*/
+#container #result {
+	display: flex;
+	height: 130px;
+	align-items: center;
+}
+
+#container #result #btns {
+	width: 50%;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+#container #result #btns button {
+	width: 90px;
+	height: 60px;
+	background-color: white;
+	border: 1px solid black;
+	font-size: 15px;
+}
+
+#container #result #btns button:hover {
+	color: white;
+	background-color: var(--primary-color);
+	cursor: pointer;
+}
+
+#container #result #final-result {
+	padding: 30px;
+}
+
+/*BMI categories*/
+#categories table {
+	margin-top: 5px;
+	border-collapse: collapse;
+}
+
+#categories table th,
+#categories table td {
+	border: 1px solid black;
+	padding: 0 5px;
+}
+
+/*mobile responsive*/
+@media only screen and (max-width: 600px) {
+	#container {
+		width: 300px;
+	}
+
+	#container #height,
+	#container #weight {
+		height: auto;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
